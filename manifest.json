@@ -1,0 +1,17 @@
+{
+    "name": "Bingmon",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "description": "Zundamon read Bing AI.",
+    "content_scripts": [
+        {
+            "matches": ["https://www.bing.com/search?*"],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "worker.js"
+    },
+    "permissions": ["declarativeNetRequestWithHostAccess"],
+    "host_permissions": ["http://localhost:50021/*"]
+}

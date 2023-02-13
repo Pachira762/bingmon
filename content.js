@@ -1,6 +1,3 @@
-console.log("hello edge extension! with worker");
-
-let texts = [];
 let textBuff = "";
 let prevRawText = "";
 let prevText = "";
@@ -140,6 +137,4 @@ const observeText = () => {
 };
 
 setInterval(observeChat, 500);
-setInterval(observeText, 600);
-
-console.log("Start observe");
+setInterval(observeText, 500);

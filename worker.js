@@ -1,5 +1,3 @@
-console.log("this is worker message");
-
 //const speaker = 5; // zunda sexy
 const speaker = 3; // zunda normal 
 const speedScale = 1.25;
@@ -13,7 +11,6 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
     })
     .then(response => {
         if (response.status != 200) {
-            console.log(response);
             return Promise.reject(`failed audio_query\n${response.status}\n${response.url}`);
         }
 
@@ -33,7 +30,6 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
     })
     .then(response => {
         if (response.status != 200) {
-            console.log(response);
             return Promise.reject(`failed synthesize\n${response.status}\n${response.url}`);
         }
 
